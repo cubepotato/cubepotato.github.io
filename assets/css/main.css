@@ -1,0 +1,249 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  /*padding: 5px 25px;*/
+  font-size: 18px;
+  margin: 0;
+  color: darkslategrey;
+  background-color: #666;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+  margin: 10px auto 0px auto;
+}
+
+
+a {
+  text-decoration: none;
+  color: forestgreen;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header h1 {
+  margin-top: 30px;
+  float: left;
+  color: beige;
+}
+
+.header h5 {
+  margin-top: 80px;
+  float: left;
+  position: absolute;
+  left: 207px;
+}
+
+h3 {
+  margin-top: 5px;
+}
+
+.navbar ul li {
+  display: inline-block;
+  float: left;
+  margin: 5px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: beige;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: darkslategray;
+  border-radius: 0%;
+  transition: all 0.3s;
+}
+
+.navbar a:hover {
+  background-color: beige;
+  color: darkslategray;
+}
+
+.navbar ul {
+  position: absolute;
+  float: left;
+  margin-top: 5vh;
+  right: 20px;
+}
+
+.logo-image {
+  width: 107px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px
+}
+
+#togglemenu {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.95);
+  /*border-bottom: 4px dashed #333;
+  border-left: 4px dashed #333;
+  border-right: 4px dashed #333;*/
+  left: 13vw;
+  right: 13vw;
+  top: 0px;
+}
+
+.content {
+  margin: 130px 13vw 30px 13vw;
+  text-align: justify;
+  background-color: beige;
+  padding: 100px;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.footer {
+  background-color: darkslategray;
+  border: 3px dashed;
+  text-align: center;
+  text-decoration: underline;
+  margin: auto 13vw auto 13vw;
+  color: beige;
+}
+
+#scroll-to-top{
+  display: none;
+  position: fixed;
+  bottom: 65px;
+  right: 45px;
+  opacity: 0.85;
+  background-color: orange;
+  color: beige;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+#scroll-to-top:hover{
+  opacity: 1;
+  background-color: orangered;
+}
+
+#to-top-arrow {
+  font-size: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 60px;
+}
+
+
+
+/*Phone*/
+@media (max-width: 1000px) {
+  .header {
+    left: 5vw;
+    right: 5vw;
+    height: 75px;
+  }
+  
+  .logo-image {
+    width: 50px;
+  }
+  
+  .navbar {
+    position: fixed;
+    transition: all 1s;
+    display: none;
+    top: -10px;
+  }
+  
+  .navbar ul {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.95);
+    left: 5vw;
+    right: 5vw;
+    top: 40px;
+    text-align: right;
+  }
+  
+  .navbar a {
+    margin-top: 30px;
+    background: rgba(0,0,0,0);
+  }
+  
+  .navbar li {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    right: 30px;
+    float: right;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .header h1 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .header h5 {
+    margin-top: 40px;
+    left: 110px;
+  }
+  
+  #togglemenu {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    display: block;
+    transition: all 0.5s;
+  }
+  
+  #togglemenu:hover {
+    background-color: darkslategray;
+  }
+  
+  #togglemenu:active {
+    transform: rotate(-60deg);
+  }
+  
+  .content {
+    margin: 130px 5vw 30px 5vw;
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  .content h1 {
+    text-align: center;
+  }
+  
+  .footer {
+    margin: auto 5vw auto 5vw;
+  }
+  
+  #scroll-to-top {
+    width: 35px;
+    height: 35px;
+    bottom: 40px;
+    right: 20px;
+  }
+  
+  #to-top-arrow {
+    width: 30px;
+    left: 3px;
+    top: 2px;
+  }
+  .show {
+    display: block;
+  }
+}

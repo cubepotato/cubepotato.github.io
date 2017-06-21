@@ -1,0 +1,123 @@
+<DOCTYPE html>
+  <head>
+    <title>CubePotato Studio</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/scrollbar.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <img src="assets/images/logox.png" class="logo-image">
+      <h1 name="top">Cube Potato</h1>
+      <h5>Games</h5>
+      <img id="togglemenu" src="assets/images/menu.png" width="30px">
+
+      <nav class="navbar">
+        <ul>
+          <li class="navItem"><a href="#first">First</a></li>
+          <li class="navItem"><a href="#second">Second</a></li>
+          <li class="navItem"><a href="#third">Third</a></li>
+          <li class="navItem"><a href="#last">Last</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      
+    </div>
+    <div class="footer">
+      <p>&copy 2017 Cube Potato</p>
+    </div>
+    <a href>
+      <div id="scroll-to-top">
+        <img id="to-top-arrow" src="assets/images/upArrow.png">
+      </div>
+    </a>
+    
+    <script>
+      var ct = $('.content');
+      
+      function toTop (time) {
+        $('html, body').animate({scrollTop:0}, time);
+      }
+      
+      setInterval(function() {
+        var hash = window.location.hash;
+        if (hash === "#first") {
+          
+          ct.load('pages/a.html'); 
+          
+        } else if (hash === "#second") {
+          
+          ct.load('pages/b.html');
+          
+        } else if (hash === "#third") {
+
+          ct.load('pages/c.html');
+          
+        } else if (hash === "#last") {
+
+          ct.load('pages/d.html');
+          
+        } else {
+
+          ct.load('pages/a.html');
+          
+        }
+      }, 200);
+      
+      $('.navItem').click(function() {
+        toTop(100);
+      });
+      
+      $(function(){
+        var stt_is_shown = false;
+        $(window).scroll(function(){
+          var win_height = 300;
+          var scroll_top = $(document).scrollTop(); 
+          if (scroll_top > win_height && !stt_is_shown) {
+            stt_is_shown = true;
+            $("#scroll-to-top").fadeIn();
+          } else if (scroll_top < win_height && stt_is_shown) {
+            stt_is_shown = false;
+            $("#scroll-to-top").fadeOut();
+          }
+        });
+        
+        $("#scroll-to-top").click(function(e){
+          e.preventDefault();
+          toTop(900);
+        });
+      });
+      
+      var x = 0;
+      $(document).ready(function(){
+        $('#togglemenu').click(function(){
+          $('.navbar').toggleClass('show');
+          var menuBt = document.getElementById('togglemenu');
+          if (x===0) {
+            menuBt.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Grey_close_x.svg/1024px-Grey_close_x.svg.png';
+            x = 1;
+          } else {
+            menuBt.src = 'https://www.materialui.co/materialIcons/navigation/menu_grey_192x192.png';
+            x = 0;
+          }
+        });//open click
+      });//document ready end
+      function hideMenu() {
+        $('nav').toggleClass('show');
+        var menuBt = document.getElementById('togglemenu');
+        if (x===0) {
+          menuBt.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Grey_close_x.svg/1024px-Grey_close_x.svg.png';
+          x = 1;
+        } else {
+          menuBt.src = 'https://www.materialui.co/materialIcons/navigation/menu_grey_192x192.png';
+          x = 0;
+        }
+      }
+    </script>
+  </body>
+</DOCTYPE>

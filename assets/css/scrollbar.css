@@ -1,0 +1,45 @@
+/*chrome*/
+::-webkit-scrollbar {
+  position: fixed;
+  width: 15px;
+  right: 15px;
+}
+::-webkit-scrollbar-button {
+  background-color: rgba(0,0,0,0.75);
+  height: 15px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: darkslategray;
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkorange;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: orangered;
+}
+::-webkit-scrollbar-corner {
+  color: blue;
+}
+
+/*firefox*/
+::-moz-scrollbar {
+  position: fixed;
+  width: 15px;
+  right: 15px;
+}
+::-moz-scrollbar-button {
+  background-color: darkslategray;
+  height: 15px;
+}
+::-moz-scrollbar-track-piece {
+  background-color: orangered;
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkorange;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: orangered;
+}
+::-moz-scrollbar-corner {
+  color: blue;
+}
