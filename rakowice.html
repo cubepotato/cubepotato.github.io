@@ -6,22 +6,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="header">
       <img src="assets/images/logox.png" class="logo-image">
-      <h1 name="top">Cube Potato</h1>
-      <h5>Games</h5>
+      <h1 name="top" style="font-family: 'Audiowide', cursive; color: orangered;">R a k o w i c e</h1>
       <img id="togglemenu" src="assets/images/menu.png" width="30px">
 
       <nav class="navbar">
         <ul>
-          <li class="navItem"><a href="#first">First</a></li>
-          <li class="navItem"><a href="#second">Second</a></li>
-          <li class="navItem"><a href="#third">Third</a></li>
-          <li class="navItem"><a href="#last">Last</a></li>
+          <li class="navItem"><a href="#start">Start</a></li>
+          <li class="navItem"><a href="#regulamin">Regulamin</a></li>
+          <li class="navItem"><a href="#join">Dołącz</a></li>
         </ul>
       </nav>
     </div>
@@ -46,21 +45,17 @@
       
       setInterval(function() {
         var hash = window.location.hash;
-        if (hash === "#first") {
+        if (hash === "#start") {
           
           ct.load('pages/a.html'); 
           
-        } else if (hash === "#second") {
+        } else if (hash === "#regulamin") {
           
           ct.load('pages/b.html');
           
-        } else if (hash === "#third") {
+        } else if (hash === "#joim") {
 
           ct.load('pages/c.html');
-          
-        } else if (hash === "#last") {
-
-          ct.load('pages/d.html');
           
         } else {
 
